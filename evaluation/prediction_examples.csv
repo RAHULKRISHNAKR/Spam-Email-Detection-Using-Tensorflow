@@ -1,0 +1,18 @@
+text,true_label,predicted_label,confidence,correct,true_category,predicted_category,case
+FreeMsg: Fancy a flirt? Reply DATE now & join the UKs fastest growing mobile dating service. Msgs rcvd just 25p to optout txt stop to 83021. Reply DATE now!,1,1,0.99999964,True,Spam,Spam,True Positive
+"SPJanuary Male Sale! Hot Gay chat now cheaper, call 08709222922. National rate from 1.5p/min cheap to 7.8p/min peak! To stop texts call 08712460324 (10p/min)",1,1,0.9999994,True,Spam,Spam,True Positive
+Get the official ENGLAND poly ringtone or colour flag on yer mobile for tonights game! Text TONE or FLAG to 84199. Optout txt ENG STOP Box39822 W111WX £1.50,1,1,0.99999934,True,Spam,Spam,True Positive
+Get the official ENGLAND poly ringtone or colour flag on yer mobile for tonights game! Text TONE or FLAG to 84199. Optout txt ENG STOP Box39822 W111WX £1.50,1,1,0.99999934,True,Spam,Spam,True Positive
+You have WON a guaranteed £1000 cash or a £2000 prize. To claim yr prize call our customer service representative on 08714712379 between 10am-7pm Cost 10p,1,1,0.9999991,True,Spam,Spam,True Positive
+I'm going 4 lunch now wif my family then aft dat i go str 2 orchard lor.,0,0,0.000119273194,True,Ham,Ham,True Negative
+That's ok. I popped in to ask bout something and she said you'd been in. Are you around tonght wen this girl comes?,0,0,0.00013378628,True,Ham,Ham,True Negative
+Sorry i've not gone to that place. I.ll do so tomorrow. Really sorry.,0,0,0.00015151204,True,Ham,Ham,True Negative
+"I'm done. I'm sorry. I hope your next space gives you everything you want. Remember all the furniture is yours. If i'm not around when you move it, just lock all the locks and leave the key with jenne.",0,0,0.00015290533,True,Ham,Ham,True Negative
+"Sorry im getting up now, feel really bad- totally rejected that kinda me thing.",0,0,0.00017342172,True,Ham,Ham,True Negative
+K..u also dont msg or reply to his msg..,0,1,0.62859786,False,Ham,Spam,False Positive
+Pete can you please ring meive hardly gotany credit,0,1,0.5143321,False,Ham,Spam,False Positive
+"Do you realize that in about 40 years, we'll have thousands of old ladies running around with tattoos?",1,0,0.0010464406,False,Spam,Ham,False Negative
+Sorry I missed your call let's talk when you have the time. I'm on 07090201529,1,0,0.0015341231,False,Spam,Ham,False Negative
+ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.,1,0,0.0019914915,False,Spam,Ham,False Negative
+"Hi ya babe x u 4goten bout me?' scammers getting smart..Though this is a regular vodafone no, if you respond you get further prem rate msg/subscription. Other nos used also. Beware!",1,0,0.0040511065,False,Spam,Ham,False Negative
+XCLUSIVE@CLUBSAISAI 2MOROW 28/5 SOIREE SPECIALE ZOUK WITH NICHOLS FROM PARIS.FREE ROSES 2 ALL LADIES !!! info: 07946746291/07880867867,1,0,0.01653841,False,Spam,Ham,False Negative

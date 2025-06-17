@@ -14,11 +14,16 @@ from sklearn.metrics import (
 import sys
 from typing import Dict, Tuple, Any, List
 
-# Add parent directory to path to import modules
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Fix the import path to properly include the project root directory
+# Change this line:
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# To this:
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(project_root)
 
-from data.load_data import load_spam_dataset
-from data.preprocess import preprocess_data, load_tokenizer
+# Now the imports will work
+from src.data.load_data import load_spam_dataset
+from src.data.preprocess import preprocess_data, load_tokenizer, preprocess_text
 
 def evaluate_model(
     model_path: str,
@@ -63,7 +68,6 @@ def evaluate_model(
     
     # Preprocess test data
     print("Preprocessing test data...")
-    from src.data.preprocess import preprocess_text
     X_test_clean = [preprocess_text(text) for text in X_test]
     X_test_seq = tokenizer.texts_to_sequences(X_test_clean)
     X_test_seq = tf.keras.preprocessing.sequence.pad_sequences(X_test_seq, maxlen=max_len, padding='post', truncating='post')

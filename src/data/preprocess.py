@@ -61,8 +61,8 @@ def preprocess_text(text: str, remove_stopwords: bool = True, lemmatize: bool = 
     # Clean text
     text = clean_text(text)
     
-    # Tokenize
-    words = nltk.word_tokenize(text)
+    # Simple tokenization (avoid using nltk.word_tokenize)
+    words = text.split()
     
     # Remove stopwords
     if remove_stopwords:
