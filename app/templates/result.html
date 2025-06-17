@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        .title {
+            color: #343a40;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .result-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .spam-result {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .spam {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .ham {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .confidence {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .message-content {
+            background-color: #f1f3f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+            overflow-wrap: break-word;
+        }
+        .btn-back {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Spam Detection Results</h1>
+        
+        <div class="card result-card">
+            <div class="card-body">
+                {% if prediction.label == 'SPAM' %}
+                    <div class="spam-result spam">
+                        SPAM DETECTED
+                    </div>
+                {% else %}
+                    <div class="spam-result ham">
+                        HAM (NOT SPAM)
+                    </div>
+                {% endif %}
+                
+                <div class="confidence">
+                    Confidence: {{ "%.2f"|format(prediction.confidence * 100) }}%
+                </div>
+                
+                <h5>Message Content:</h5>
+                <div class="message-content">
+                    {{ text }}
+                </div>
+                
+                <a href="/" class="btn btn-primary btn-back mt-3">Check Another Message</a>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4 text-muted">
+            <p>This prediction was made using a TensorFlow neural network model trained on spam and ham messages.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
